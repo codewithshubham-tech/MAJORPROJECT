@@ -1,2 +1,2 @@
 # MAJORPROJECT
-Wanderlust (Clone of Airbnb)
+Wanderlust (Clone of Airbnb Website)
