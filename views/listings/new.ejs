@@ -1,0 +1,102 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+    
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <h3>Create a New Listing</h3>
+            <form method ="POST" action ="/listings" novalidate class ="needs-validation" enctype="multipart/form-data">
+                <div class = "mb-3">
+                    <label for = "title" class = "form-label">Title</label>
+                    <input name = "listing[title]"
+                        placeholder = "Add a catchy title"
+                        type = "text"
+                        class ="form-control"
+                        required
+                    >
+                    <div class="valid-feedback">Title Looks Good</div>
+                </div>
+
+                <div class = "mb-3">
+                    <label for ="description" class = "form-label">Description</label>
+                    <textarea name = "listing[description]" placeholder = "enter description"
+                        type = "text"
+                        class ="form-control"
+                        required></textarea>
+                        <div class="invalid-feedback">
+                            Please Enter A Short Description
+                        </div>
+                </div>
+
+                
+
+                <div class = "mb-3">
+                    <label for = "image" class = "form-label">Upload Listing Image</label>
+                    <input name = "listing[image]"
+                    type = "file"
+                    class ="form-control"
+                    required
+                    >
+                </div>
+
+                <div class = "mb-3">
+                    <label for = "category" class = "form-label">Choose Category</label>
+                    <select class="form-select" aria-label="Default select example" required>
+                        <option selected>Choose the category from menu</option>
+                        <option name ="listing[category]" value="artic" class ="form-control"  required>Artic</option>
+                        <option name ="listing[category]" value="mountain" class ="form-control" required>Mountain</option>
+                        <option name ="listing[category]"value="iconic cities" class ="form-control" required>Iconic Cities</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please Choose Category from Menu
+                    </div>
+                </div>
+
+                
+                <div class="row">
+
+                    <div class = "mb-3 col-md-4">
+                        <label for ="price" class = "form-label">Price</label>
+                        <input name = "listing[price]"
+                        placeholder = "1200"
+                        type = number
+                        class ="form-control"
+                        required
+                        >
+                        <div class="invalid-feedback">
+                            Please Enter Valid Price
+                        </div>
+                    </div>
+                 
+                    <div class = "mb-3 col-md-8">
+                        <label for = "country" class = "form-label">Country</label>
+                        <input name = "listing[country]"
+                        placeholder = "India"
+                        type = "text"
+                        class ="form-control"
+                        required
+                        >
+                        <div class="invalid-feedback">
+                            Country Name Should Be Valid
+                        </div>
+                    </div>
+                </div>  
+                
+                
+                <div class = "mb-3">
+                    <label for = "location" class = "form-label">Location</label>
+                    <input name = "listing[location]"
+                    placeholder = "Jaipur, Rajasthan"
+                    type = "text"
+                    class ="form-control"
+                    required
+                    >
+                    <div class = "invalid-feedback">
+                        Location Should Be Valid
+                    </div>
+                </div>
+                <button class ="add-btn btn btn-dark mt-3">Add</button>
+                
+            </form>
+        </div>    
+    </div>    
+</body>
